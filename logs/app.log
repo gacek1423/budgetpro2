@@ -1,0 +1,790 @@
+[2026-01-03 16:40:38] [DEBUG] API Add Transaction - Raw Input: {"type_context":"personal","type":"expense","amount":"6","currency":"PLN","exchange_rate":"1","category":"6","transaction_date":"2026-01-03"} 
+[2026-01-03 16:40:38] [ERROR] PHP Error [2]: Undefined variable $db in D:\xampp\htdocs\budgetpro\api\add_transaction.php:58 
+[2026-01-03 16:40:38] [ERROR] Uncaught Exception: Call to a member function prepare() on null
+Stack: #0 {main} 
+[2026-01-03 17:03:20] [ERROR] Uncaught Exception: SQLSTATE[HY000] [1049] Unknown database 'budgetpro'
+Stack: #0 D:\xampp\htdocs\budgetpro\includes\db.php(83): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 D:\xampp\htdocs\budgetpro\includes\db.php(61): Database::createInstance()
+#2 D:\xampp\htdocs\budgetpro\includes\db.php(326): Database::getInstance()
+#3 D:\xampp\htdocs\budgetpro\pages\goals.php(7): db()
+#4 {main} 
+[2026-01-03 17:03:22] [ERROR] PHP Error [2]: Trying to access array offset on value of type null in D:\xampp\htdocs\budgetpro\includes\header.php:72 
+[2026-01-03 17:03:22] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\header.php:72 
+[2026-01-03 17:03:23] [ERROR] Uncaught Exception: SQLSTATE[HY000] [1049] Unknown database 'budgetpro'
+Stack: #0 D:\xampp\htdocs\budgetpro\includes\db.php(83): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 D:\xampp\htdocs\budgetpro\includes\db.php(61): Database::createInstance()
+#2 D:\xampp\htdocs\budgetpro\includes\db.php(326): Database::getInstance()
+#3 D:\xampp\htdocs\budgetpro\pages\dashboard.php(6): db()
+#4 {main} 
+[2026-01-03 17:03:25] [ERROR] PHP Error [2]: Trying to access array offset on value of type null in D:\xampp\htdocs\budgetpro\includes\header.php:72 
+[2026-01-03 17:03:25] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\header.php:72 
+[2026-01-03 17:03:26] [ERROR] Uncaught Exception: SQLSTATE[HY000] [1049] Unknown database 'budgetpro'
+Stack: #0 D:\xampp\htdocs\budgetpro\includes\db.php(83): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 D:\xampp\htdocs\budgetpro\includes\db.php(61): Database::createInstance()
+#2 D:\xampp\htdocs\budgetpro\includes\db.php(326): Database::getInstance()
+#3 D:\xampp\htdocs\budgetpro\pages\dashboard.php(6): db()
+#4 {main} 
+[2026-01-03 17:03:34] [ERROR] Uncaught Exception: SQLSTATE[HY000] [1049] Unknown database 'budgetpro'
+Stack: #0 D:\xampp\htdocs\budgetpro\includes\db.php(83): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 D:\xampp\htdocs\budgetpro\includes\db.php(61): Database::createInstance()
+#2 D:\xampp\htdocs\budgetpro\includes\db.php(326): Database::getInstance()
+#3 D:\xampp\htdocs\budgetpro\pages\goals.php(7): db()
+#4 {main} 
+[2026-01-03 17:03:37] [ERROR] Uncaught Exception: SQLSTATE[HY000] [1049] Unknown database 'budgetpro'
+Stack: #0 D:\xampp\htdocs\budgetpro\includes\db.php(83): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue), Array)
+#1 D:\xampp\htdocs\budgetpro\includes\db.php(61): Database::createInstance()
+#2 D:\xampp\htdocs\budgetpro\includes\db.php(326): Database::getInstance()
+#3 D:\xampp\htdocs\budgetpro\includes\functions.php(69): db()
+#4 D:\xampp\htdocs\budgetpro\login.php(19): checkBruteForce('::1')
+#5 {main} 
+[2026-01-03 17:04:38] [DEBUG] Próba rejestracji dla użytkownika: GacekX3 
+[2026-01-03 17:04:48] [DEBUG] Próba rejestracji dla użytkownika: GacekX3 
+[2026-01-03 17:27:01] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:27:01] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:27:03] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:27:03] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:27:27] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:27:27] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:27:30] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:27:30] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:28:00] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:28:00] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:28:01] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:28:01] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:28:01] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:28:01] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:28:01] [ERROR] PHP Error [2]: Undefined array key "category" in D:\xampp\htdocs\budgetpro\api\planner_action.php:19 
+[2026-01-03 17:28:01] [ERROR] PHP Error [8192]: trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\budgetpro\includes\functions.php:31 
+[2026-01-03 17:35:28] [ERROR] SQL Error in add_transaction: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'field list' 
+[2026-01-03 17:35:31] [ERROR] SQL Error in add_transaction: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'field list' 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Praca" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:203 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Mieszkanie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:206 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Transport" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:222 
+[2026-01-03 19:48:39] [ERROR] PHP Error [2]: Undefined array key "Jedzenie" in D:\xampp\htdocs\budgetpro\api\seed_control_panel.php:217 
+[2026-01-03 19:48:39] [ERROR] Uncaught Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3120, 'income', 'Wypłata', '2021-01-10', NOW()),(2, , 1022.4, 'expense', 'C...' at line 1
+Stack: #0 D:\xampp\htdocs\budgetpro\api\seed_control_panel.php(230): PDO->query('INSERT INTO per...')
+#1 {main} 
+[2026-01-03 21:07:26] [ERROR] PHP Error [2]: include(D:\laragon\www\budgetpro\includes/announcements_logic.php): Failed to open stream: No such file or directory in D:\laragon\www\budgetpro\includes\header.php:47 
+[2026-01-03 21:07:26] [ERROR] PHP Error [2]: include(): Failed opening 'D:\laragon\www\budgetpro\includes/announcements_logic.php' for inclusion (include_path='.;d:/laragon/etc/php/pear') in D:\laragon\www\budgetpro\includes\header.php:47 
+[2026-01-03 21:07:41] [ERROR] PHP Error [2]: include(D:\laragon\www\budgetpro\includes/announcements_logic.php): Failed to open stream: No such file or directory in D:\laragon\www\budgetpro\includes\header.php:47 
+[2026-01-03 21:07:41] [ERROR] PHP Error [2]: include(): Failed opening 'D:\laragon\www\budgetpro\includes/announcements_logic.php' for inclusion (include_path='.;d:/laragon/etc/php/pear') in D:\laragon\www\budgetpro\includes\header.php:47 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: include(D:\laragon\www\budgetpro\includes/announcements_logic.php): Failed to open stream: No such file or directory in D:\laragon\www\budgetpro\includes\header.php:47 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: include(): Failed opening 'D:\laragon\www\budgetpro\includes/announcements_logic.php' for inclusion (include_path='.;d:/laragon/etc/php/pear') in D:\laragon\www\budgetpro\includes\header.php:47 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $personal_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $business_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $personal_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $business_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:52 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:53 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $incomeCats in D:\laragon\www\budgetpro\pages\dashboard.php:157 
+[2026-01-03 21:08:42] [ERROR] PHP Error [2]: Undefined variable $expenseCats in D:\laragon\www\budgetpro\pages\dashboard.php:158 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $personal_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $business_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $personal_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $business_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:52 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:53 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $incomeCats in D:\laragon\www\budgetpro\pages\dashboard.php:157 
+[2026-01-03 21:10:34] [ERROR] PHP Error [2]: Undefined variable $expenseCats in D:\laragon\www\budgetpro\pages\dashboard.php:158 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $personal_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $business_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $personal_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $business_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:52 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:53 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $incomeCats in D:\laragon\www\budgetpro\pages\dashboard.php:157 
+[2026-01-03 21:11:29] [ERROR] PHP Error [2]: Undefined variable $expenseCats in D:\laragon\www\budgetpro\pages\dashboard.php:158 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $personal_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $business_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $personal_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $business_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:52 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:53 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $incomeCats in D:\laragon\www\budgetpro\pages\dashboard.php:157 
+[2026-01-03 21:12:13] [ERROR] PHP Error [2]: Undefined variable $expenseCats in D:\laragon\www\budgetpro\pages\dashboard.php:158 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $personal_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $business_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $personal_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $business_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:52 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:53 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $incomeCats in D:\laragon\www\budgetpro\pages\dashboard.php:157 
+[2026-01-03 21:12:57] [ERROR] PHP Error [2]: Undefined variable $expenseCats in D:\laragon\www\budgetpro\pages\dashboard.php:158 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $personal_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $business_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $personal_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $business_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:52 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:53 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $incomeCats in D:\laragon\www\budgetpro\pages\dashboard.php:157 
+[2026-01-03 21:12:58] [ERROR] PHP Error [2]: Undefined variable $expenseCats in D:\laragon\www\budgetpro\pages\dashboard.php:158 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $personal_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $business_income in D:\laragon\www\budgetpro\pages\dashboard.php:44 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $personal_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $business_expense in D:\laragon\www\budgetpro\pages\dashboard.php:48 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:52 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $total_balance in D:\laragon\www\budgetpro\pages\dashboard.php:53 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $incomeCats in D:\laragon\www\budgetpro\pages\dashboard.php:157 
+[2026-01-03 21:13:27] [ERROR] PHP Error [2]: Undefined variable $expenseCats in D:\laragon\www\budgetpro\pages\dashboard.php:158 
+[2026-01-03 21:31:41] [ERROR] Uncaught Exception: Call to undefined function getUserPreferences()
+Stack: #0 D:\laragon\www\budgetpro\pages\dashboard.php(8): require_once()
+#1 {main} 
+[2026-01-03 21:31:46] [ERROR] Uncaught Exception: Call to undefined function getUserPreferences()
+Stack: #0 D:\laragon\www\budgetpro\pages\dashboard.php(8): require_once()
+#1 {main} 
+[2026-01-03 21:32:05] [ERROR] Uncaught Exception: Call to undefined function getUserPreferences()
+Stack: #0 D:\laragon\www\budgetpro\pages\reports.php(4): require_once()
+#1 {main} 
+[2026-01-03 21:32:09] [ERROR] Uncaught Exception: Call to undefined function getUserPreferences()
+Stack: #0 D:\laragon\www\budgetpro\pages\debts.php(3): require_once()
+#1 {main} 
+[2026-01-03 21:37:10] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:15 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:18 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:21 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:27 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:30 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:33 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:36 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:39 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:45 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:48 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:51 
+[2026-01-03 21:48:04] [ERROR] PHP Error [2]: Undefined variable $currentPage in D:\laragon\www\budgetpro\includes\sidebar.php:54 
+[2026-01-03 21:50:02] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 
+[2026-01-03 21:50:23] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 
+[2026-01-03 21:50:28] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 
+[2026-01-03 21:50:41] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 

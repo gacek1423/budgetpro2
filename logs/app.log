@@ -788,3 +788,117 @@ Stack: #0 D:\laragon\www\budgetpro\pages\debts.php(3): require_once()
 [2026-01-03 21:50:23] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 
 [2026-01-03 21:50:28] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 
 [2026-01-03 21:50:41] [ERROR] PHP Error [8]: session_start(): Ignoring session_start() because a session is already active (started from D:\laragon\www\budgetpro\includes\session.php on line 17) in D:\laragon\www\budgetpro\api\settings_action.php:7 
+[2026-01-03 23:44:50] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\pages\dashboard.php(12): require_once()
+#1 {main} 
+[2026-01-03 23:44:51] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\pages\dashboard.php(12): require_once()
+#1 {main} 
+[2026-01-03 23:45:13] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\pages\dashboard.php(12): require_once()
+#1 {main} 
+[2026-01-03 23:45:24] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\pages\family.php(3): require_once()
+#1 {main} 
+[2026-01-03 23:47:21] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\pages\family.php(3): require_once()
+#1 {main} 
+[2026-01-03 23:48:07] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\pages\family.php(3): require_once()
+#1 {main} 
+[2026-01-03 23:48:11] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\pages\family.php(3): require_once()
+#1 {main} 
+[2026-01-03 23:52:41] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 D:\laragon\www\budgetpro\debug.php(52): require_once()
+#1 {main} 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-03 23:55:07] [ERROR] PHP Error [8192]: substr(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-03 23:55:07] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-03 23:55:07] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-03 23:55:07] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-03 23:55:07] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 {main} 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-03 23:57:20] [ERROR] PHP Error [8192]: substr(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-03 23:57:20] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-03 23:57:20] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-03 23:57:20] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-03 23:57:20] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 {main} 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:10] [ERROR] PHP Error [8192]: substr(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:10] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:10] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:10] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:10] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 {main} 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:11] [ERROR] PHP Error [8192]: substr(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:11] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:11] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:11] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:11] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 {main} 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:13] [ERROR] PHP Error [8192]: substr(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:13] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:13] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:13] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:13] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 {main} 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:14] [ERROR] PHP Error [8192]: substr(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:14] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:14] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:14] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:14] [ERROR] Uncaught Exception: Call to undefined method Database::prepare()
+Stack: #0 {main} 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Undefined array key "theme" in D:\laragon\www\budgetpro\pages\transactions.php:31 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:14 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:15] [ERROR] PHP Error [8192]: substr(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:73 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:15] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:76 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Undefined variable $currentUser in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:15] [ERROR] PHP Error [2]: Trying to access array offset on null in D:\laragon\www\budgetpro\includes\sidebar.php:77 
+[2026-01-04 00:07:15] [ERROR] PHP Error [8192]: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\budgetpro\includes\sidebar.php:77 

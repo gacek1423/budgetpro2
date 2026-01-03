@@ -1,0 +1,30 @@
+# budgetpro2/.gitignore
+# IGNOROWANE PLIKI - NIE WYSYŁAJ NA GITHUB!
+
+# Sekrety
+.env
+config.php
+
+# Zależności
+vendor/
+node_modules/
+
+# Logi i cache
+logs/*
+!logs/.gitkeep
+*.log
+*.cache
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Systemowe
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Composer
+composer.lock

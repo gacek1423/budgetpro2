@@ -1,18 +1,30 @@
-</main>
+<?php
+// budgetpro2/includes/footer.php
+// Zawsze na końcu strony
+?>
         </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="../assets/js/main.js"></script>
+    </div>
     
+    <!-- Global scripts -->
     <script>
-        <?php if (isset($_SESSION['flash_message'])): ?>
-            document.addEventListener('DOMContentLoaded', function() {
-                showToast(
-                    "<?php echo addslashes($_SESSION['flash_message']['text']); ?>", 
-                    "<?php echo $_SESSION['flash_message']['type']; ?>"
-                );
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const html = document.documentElement;
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
             });
-            <?php unset($_SESSION['flash_message']); ?>
-        <?php endif; ?>
+        }
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
     </script>
 </body>
 </html>
+<?php
+// Czyszczenie flash messages
+unset($_SESSION['flash_message']);
+?>

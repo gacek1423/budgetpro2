@@ -1,93 +1,105 @@
 <?php
-// api/login_action.php
-// Wymuszamy raportowanie błędów tylko do logów, nie na ekran (żeby nie psuć JSON)
-ini_set('display_errors', 0);
-error_reporting(E_ALL);
+// budgetpro2/api/login_action.php
+// ZASTĄP CAŁĄ ZAWARTOŚĆ TYM KODEM:
 
-session_start();
 header('Content-Type: application/json');
 
-require_once '../includes/functions.php';
-require_once '../includes/TwoFactorService.php';
+require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/TwoFactorService.php';
+require_once __DIR__ . '/../includes/RateLimiter.php';
+
+// Inicjalizacja rate limiter dla loginu
+$rateLimiter = new RateLimiter('login', 5, 900); // 5 prób w 15 minut
+$ip = $_SERVER['REMOTE_ADDR'];
 
 try {
-    // 1. Odbiór danych (z obsługą błędów JSON)
-    $rawInput = file_get_contents('php://input');
-    $input = json_decode($rawInput, true);
-    
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        throw new Exception("Błąd danych JSON: " . json_last_error_msg());
+    // Sprawdź rate limit PRZED jakąkolwiek logiką
+    if (!$rateLimiter->check($ip)) {
+        $remaining = $rateLimiter->getRemainingTime($ip);
+        throw new Exception("Zbyt wiele prób logowania. Spróbuj ponownie za " . ceil($remaining / 60) . " minut.");
     }
 
-    $email = trim($input['email'] ?? '');
-    $password = $input['password'] ?? '';
-    $code = isset($input['code']) ? trim($input['code']) : '';
+    // Odbierz dane
+    $data = json_decode(file_get_contents('php://input'), true);
+    if (!$data) {
+        $data = $_POST;
+    }
 
+    $email = filter_var($data['email'] ?? '', FILTER_SANITIZE_EMAIL);
+    $password = $data['password'] ?? '';
+    $code = $data['code'] ?? '';
+
+    // Walidacja
     if (empty($email) || empty($password)) {
         throw new Exception("Podaj email i hasło.");
     }
 
-    $db = db();
-
-    // 2. Pobierz użytkownika
-    // Pobieramy jawnie kolumny, aby uniknąć problemów z 'select *'
-    $stmt = $db->prepare("SELECT id, username, password, is_2fa_enabled, two_factor_secret FROM users WHERE email = ?");
+    // Sprawdź użytkownika w bazie
+    $stmt = db()->prepare("
+        SELECT id, username, password_hash, is_2fa_enabled, two_factor_secret 
+        FROM users 
+        WHERE email = ?
+    ");
     $stmt->execute([$email]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$user) {
-        // Sleep dla bezpieczeństwa (przeciw Brute Force)
-        usleep(200000); 
+        // Sleep dla bezpieczeństwa (ukrywa fakt istnienia użytkownika)
+        usleep(500000); // 500ms
         throw new Exception("Nieprawidłowe dane logowania.");
     }
 
-    // 3. Weryfikacja hasła
-    if (!password_verify($password, $user['password'])) {
+    // Weryfikacja hasła
+    if (!password_verify($password, $user['password_hash'])) {
+        // Zarejestruj nieudaną próbę
+        $rateLimiter->hit($ip);
         throw new Exception("Nieprawidłowe dane logowania.");
     }
 
-    // --- LOGOWANIE UDANE (Hasło OK) ---
+    // Reset limitu po udanym haśle
+    $rateLimiter->reset($ip);
 
-    // Konwersja na integer dla pewności (baza czasem zwraca string "0")
+    // Sprawdź 2FA
     $is2fa = (int)$user['is_2fa_enabled'];
-
-    // 4. Sprawdzanie 2FA
+    
     if ($is2fa === 1) {
-        // Jeśli 2FA jest włączone
         if (empty($code)) {
             echo json_encode(['status' => '2fa_required']);
             exit;
         }
 
-        // Weryfikacja kodu
         $tfa = new TwoFactorService();
-        // Usuń spacje z kodu jeśli user wpisał "123 456"
-        $cleanCode = str_replace(' ', '', $code);
+        $cleanCode = preg_replace('/\s+/', '', $code); // Usuń spacje
         
-        if ($tfa->verifyCode($user['two_factor_secret'], $cleanCode)) {
-            doLogin($user);
-        } else {
+        if (!$tfa->verifyCode($user['two_factor_secret'], $cleanCode)) {
+            $rateLimiter->hit($ip); // Blokuj też za złe kody 2FA
             throw new Exception("Nieprawidłowy kod 2FA.");
         }
-    } else {
-        // 5. Brak 2FA - logujemy od razu
-        doLogin($user);
     }
 
+    // Logowanie udane!
+    doLogin($user);
+
 } catch (Exception $e) {
-    // Zwracamy czysty JSON z błędem
-    http_response_code(200); // 200 OK, ale status: error w JSON
-    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+    http_response_code(200); // 200 OK, ale błąd w JSON
+    echo json_encode([
+        'status' => 'error',
+        'message' => $e->getMessage(),
+        'retry_after' => $rateLimiter->getRemainingTime($ip)
+    ]);
 }
 
-// Funkcja pomocnicza - ustawia sesję
-function doLogin($user) {
+function doLogin($user): void {
     session_regenerate_id(true);
-    $_SESSION['user_id'] = $user['id'];
+    $_SESSION['user_id'] = (int)$user['id'];
     $_SESSION['username'] = $user['username'];
     $_SESSION['logged_in'] = true;
-    
+    $_SESSION['login_time'] = time();
+
+    // Zaktualizuj last_login
+    db()->prepare("UPDATE users SET last_login = NOW() WHERE id = ?")
+       ->execute([(int)$user['id']]);
+
     echo json_encode(['status' => 'success']);
     exit;
 }
-?>

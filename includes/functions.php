@@ -1,63 +1,99 @@
 <?php
-// budgetpro2/includes/functions.php
-// PEŁNY, POPRAWIONY KOD - GOTOWY DO UŻYCIA
+/**
+ * BudgetPro Enterprise - Funkcje Pomocnicze (Updated)
+ */
 
-// Bezpieczne ładowanie config
-$config_path = __DIR__ . '/../config.php';
-if (!file_exists($config_path)) {
-    die("❌ CRITICAL: config.php not found at: $config_path");
-}
-require_once $config_path;
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/logger.php';
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/session.php'; // Zakładam, że tu jest session_start()
 
-// ====================
-// PREFERENCJE UŻYTKOWNIKA
-// ====================
-function getUserPreferences($user_id = null) {
-    if ($user_id === null) {
-        $user_id = $_SESSION['user_id'] ?? 0;
+// --- 1. FUNKCJE SESJI I UŻYTKOWNIKA ---
+
+/**
+ * Zwraca ID zalogowanego użytkownika
+ */
+function getCurrentUserId() {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
     }
-    
-    if ($user_id > 0 && isset($_SESSION['user_prefs'])) {
+    return $_SESSION['user_id'] ?? 0;
+}
+
+/**
+ * Wymusza logowanie - chroni podstrony
+ */
+function checkLogin() {
+    if (!getCurrentUserId()) {
+        redirect('../login.php');
+    }
+}
+
+/**
+ * Pobiera preferencje użytkownika (Cache w sesji dla wydajności)
+ */
+function getUserPreferences() {
+    // Sprawdź cache w sesji
+    if (isset($_SESSION['user_prefs'])) {
         return $_SESSION['user_prefs'];
     }
     
-    try {
-        $db = db();
-        $prefs = $db->selectOne("SELECT * FROM user_preferences WHERE user_id = ?", [$user_id]);
-        if ($prefs) {
-            $_SESSION['user_prefs'] = $prefs;
-            return $prefs;
+    $userId = getCurrentUserId();
+    if ($userId) {
+        try {
+            $db = db(); 
+            // Pobieramy kolumny ustawień
+            $stmt = $db->prepare("SELECT currency_format, date_format, language, theme_color, start_page FROM users WHERE id = ?");
+            $stmt->execute([$userId]);
+            $prefs = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($prefs) {
+                $_SESSION['user_prefs'] = $prefs;
+                return $prefs;
+            }
+        } catch (Exception $e) {
+            // Ignoruj błędy bazy (fallback do domyślnych)
         }
-    } catch (Exception $e) {
-        if (DEBUG_MODE) error_log("Prefs error: " . $e->getMessage());
     }
     
-    // Domyślne
+    // Domyślne wartości (jeśli brak usera lub błąd)
     return [
         'currency_format' => 'pl',
         'date_format' => 'Y-m-d',
         'language' => 'pl',
-        'theme' => 'light',
         'theme_color' => 'blue',
-        'start_page' => 'dashboard.php',
-        'email_notifications' => 1
+        'start_page' => 'dashboard.php'
     ];
 }
 
-// ====================
-// FORMATOWANIE
-// ====================
+// --- 2. FORMATOWANIE I HELPERY ---
+
+/**
+ * Inteligentne formatowanie waluty wg ustawień
+ */
 function formatCurrency($amount) {
     $prefs = getUserPreferences();
     $amount = (float)$amount;
-    return number_format($amount, 2, ',', ' ') . ($prefs['currency_format'] === 'en' ? ' PLN' : ' zł');
+    
+    if ($prefs['currency_format'] === 'en') {
+        // Format: 1,234.56 PLN
+        return number_format($amount, 2, '.', ',') . ' PLN';
+    } else {
+        // Format: 1 234,56 zł
+        return number_format($amount, 2, ',', ' ') . ' zł';
+    }
 }
 
+/**
+ * Formatowanie daty wg ustawień
+ */
 function formatDate($dateString) {
     if (!$dateString) return '-';
     $prefs = getUserPreferences();
     $timestamp = strtotime($dateString);
-    return $timestamp ? date($prefs['date_format'], $timestamp) : $dateString;
+    if (!$timestamp) return $dateString;
+    
+    return date($prefs['date_format'], $timestamp);
 }
 
 function e($string) {
@@ -65,130 +101,144 @@ function e($string) {
 }
 
 function dd($data) {
-    echo '<pre style="background:#1e1e1e;color:#d4d4d4;padding:10px;border-radius:5px;overflow:auto;">';
+    echo '<pre style="background: #111; color: #0f0; padding: 10px; z-index: 9999; position: relative;">';
     print_r($data);
     echo '</pre>';
     die();
 }
 
-function sanitizeInput($data) {
-    if (is_array($data)) {
-        return array_map(__FUNCTION__, $data);
+function redirect($url) {
+    if (!headers_sent()) {
+        header("Location: $url");
+        exit();
+    } else {
+        echo "<script>window.location.href='$url';</script>";
+        echo "<noscript><meta http-equiv='refresh' content='0;url=$url'></noscript>";
+        exit();
     }
-    return htmlspecialchars(strip_tags(trim((string)$data)), ENT_QUOTES, 'UTF-8');
 }
 
-// ====================
-// BEZPIECZEŃSTWO
-// ====================
+function sanitizeInput($data) {
+    if (is_array($data)) {
+        foreach ($data as $key => $value) {
+            $data[$key] = sanitizeInput($value);
+        }
+        return $data;
+    }
+    return htmlspecialchars(strip_tags(trim($data)), ENT_QUOTES, 'UTF-8');
+}
+
+function isAjaxRequest() {
+    return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+           strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+}
+
+// --- 3. BAZA DANYCH HELPERS ---
+
+function getUserData($user_id = null) {
+    if ($user_id === null) $user_id = getCurrentUserId();
+    if (!$user_id) return null;
+    try {
+        $db = db();
+        $stmt = $db->prepare("SELECT * FROM users WHERE id = ?");
+        $stmt->execute([$user_id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) { return null; }
+}
+
+function getSum($sql, $params = []) {
+    try {
+        $db = db();
+        $stmt = $db->prepare($sql);
+        $stmt->execute($params);
+        $result = $stmt->fetchColumn();
+        return $result ? (float)$result : 0.00;
+    } catch (PDOException $e) { return 0.00; }
+}
+
+// --- 4. BEZPIECZEŃSTWO ---
+
+function checkBruteForce($ip) {
+    $db = db();
+    $stmt = $db->prepare("SELECT COUNT(*) FROM login_attempts WHERE ip_address = ? AND attempt_time > (NOW() - INTERVAL 15 MINUTE)");
+    $stmt->execute([$ip]);
+    return $stmt->fetchColumn() >= 5;
+}
+
+function recordFailedLogin($ip) {
+    $db = db();
+    $db->prepare("INSERT INTO login_attempts (ip_address) VALUES (?)")->execute([$ip]);
+}
+
+function clearLoginAttempts($ip) {
+    $db = db();
+    $db->prepare("DELETE FROM login_attempts WHERE ip_address = ?")->execute([$ip]);
+}
+
 function verifyCsrfToken($token) {
     return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
 }
 
-function generateCsrfToken() {
-    if (empty($_SESSION['csrf_token'])) {
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    }
-    return $_SESSION['csrf_token'];
-}
+// --- 5. POWIADOMIENIA (FLASH) ---
 
-// ====================
-// NOWE FUNKCJE BIZNESOWE
-// ====================
-
-/**
- * Pobiera statystyki biznesowe użytkownika
- */
-function getBusinessStats($user_id) {
-    return db()->transaction(function($db) use ($user_id) {
-        return [
-            'projects' => $db->count("SELECT COUNT(*) FROM business_projects WHERE user_id = ?", [$user_id]),
-            'invoices' => $db->count("SELECT COUNT(*) FROM business_invoices WHERE user_id = ?", [$user_id]),
-            'clients' => $db->count("SELECT COUNT(*) FROM business_clients WHERE user_id = ?", [$user_id]),
-        ];
-    });
-}
-
-/**
- * Pobiera aktywne cele finansowe z progresem
- */
-function getActiveGoals($user_id) {
-    $goals = db()->select("SELECT * FROM financial_goals WHERE user_id = ? AND is_active = 1 ORDER BY target_date ASC", [$user_id]);
-    foreach ($goals as &$goal) {
-        $progress = $goal['target_amount'] > 0 ? ($goal['current_amount'] / $goal['target_amount']) * 100 : 0;
-        $goal['progress'] = min(100, max(0, round($progress, 2)));
-    }
-    return $goals;
-}
-
-/**
- * Pobiera członków rodziny
- */
-function getFamilyMembers($user_id) {
-    return db()->select("
-        SELECT u.id, u.username, u.email, f.relationship, f.can_edit_transactions
-        FROM family_links f
-        JOIN users u ON f.linked_user_id = u.id
-        WHERE f.primary_user_id = ? AND u.is_active = 1
-    ", [$user_id]);
-}
-
-/**
- * Sprawdza czy użytkownik jest w rodzinie
- */
-function isFamilyMember($user_id, $linked_user_id) {
-    return db()->count("SELECT COUNT(*) FROM family_links WHERE primary_user_id = ? AND linked_user_id = ?", [$user_id, $linked_user_id]) > 0;
-}
-
-// ====================
-// BAZA DANYCH HELPERS
-// ====================
-
-/**
- * Pobiera dane użytkownika - POPRAWIONA WERSJA!
- */
-function getUserData($user_id = null) {
-    if ($user_id === null) {
-        $user_id = $_SESSION['user_id'] ?? 0;
-    }
-    
-    if (!$user_id) {
-        return null;
-    }
-    
-    try {
-        // POPRAWKA: Używamy selectOne() zamiast prepare()
-        return db()->selectOne("SELECT * FROM users WHERE id = ?", [$user_id]);
-    } catch (Exception $e) {
-        if (defined('DEBUG_MODE') && DEBUG_MODE) {
-            error_log("getUserData error: " . $e->getMessage());
-        }
-        return null;
-    }
-}
-
-// ====================
-// FLASH MESSAGES
-// ====================
 function setFlashMessage($message, $type = 'success') {
-    $_SESSION['flash_message'] = ['text' => $message, 'type' => $type];
+    $_SESSION['flash_message'] = [
+        'text' => $message,
+        'type' => $type
+    ];
 }
 
-function getFlashMessage() {
-    if (isset($_SESSION['flash_message'])) {
-        $msg = $_SESSION['flash_message'];
-        unset($_SESSION['flash_message']);
-        return $msg;
-    }
-    return null;
-}
+// --- 6. INICJALIZACJA ---
 
-// ====================
-// INICJALIZACJA
-// ====================
 $required_folders = [__DIR__ . '/../uploads', __DIR__ . '/../logs'];
-foreach ($required_folders as $folder) {
-    if (!is_dir($folder)) @mkdir($folder, 0755, true);
+foreach ($required_folders as $folder) { if (!is_dir($folder)) @mkdir($folder, 0755, true); }
+
+if (defined('DEBUG_MODE') && DEBUG_MODE === true) {
+    ini_set('display_errors', 1); error_reporting(E_ALL);
+} else {
+    ini_set('display_errors', 0); error_reporting(0);
+}
+date_default_timezone_set('Europe/Warsaw');
+// --- 7. TŁUMACZENIA (i18n) ---
+
+// Zmienna globalna przechowująca załadowane słowa
+$langData = [];
+
+function loadLanguage() {
+    global $langData;
+    
+    // Pobieramy język z preferencji użytkownika (funkcja, którą już mamy)
+    $prefs = getUserPreferences();
+    $langCode = $prefs['language'] ?? 'pl'; // Domyślnie PL
+    
+    // Ścieżka do pliku
+    $file = __DIR__ . "/../lang/$langCode.php";
+    
+    // Ładowanie
+    if (file_exists($file)) {
+        $langData = require $file;
+    } else {
+        // Fallback do angielskiego jeśli plik PL nie istnieje (bezpiecznik)
+        $fallback = __DIR__ . "/../lang/en.php";
+        if(file_exists($fallback)) $langData = require $fallback;
+    }
 }
 
-generateCsrfToken();
+/**
+ * Funkcja tłumacząca
+ * Użycie: echo __('menu_dashboard');
+ */
+function __($key) {
+    global $langData;
+    // Jeśli tablica pusta, spróbuj załadować
+    if (empty($langData)) {
+        loadLanguage();
+    }
+    
+    // Zwróć tłumaczenie lub sam klucz (jeśli brak tłumaczenia)
+    return $langData[$key] ?? $key;
+}
+
+// Załaduj język przy starcie
+loadLanguage();
+?>

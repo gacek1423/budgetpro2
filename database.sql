@@ -1,41 +1,142 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Wersja serwera:               8.4.3 - MySQL Community Server - GPL
--- Serwer OS:                    Win64
--- HeidiSQL Wersja:              12.8.0.6908
--- --------------------------------------------------------
+-- BudgetPro Enterprise Database
+CREATE DATABASE budgetpro CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE budgetpro;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+-- Tabela użytkowników
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    account_type ENUM('personal', 'business', 'both') DEFAULT 'both',
+    currency VARCHAR(3) DEFAULT 'PLN',
+    language VARCHAR(2) DEFAULT 'pl',
+    theme VARCHAR(10) DEFAULT 'light',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login TIMESTAMP NULL
+) ENGINE=InnoDB;
 
--- Eksport danych został odznaczony.
+-- Tabela transakcji osobistych
+CREATE TABLE personal_transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    amount DECIMAL(12,2) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    type ENUM('income', 'expense') NOT NULL,
+    description TEXT,
+    transaction_date DATE NOT NULL,
+    tags JSON,
+    recurring BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
 
--- Eksport danych został odznaczony.
+-- Tabela transakcji firmowych
+CREATE TABLE business_transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    amount DECIMAL(12,2) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    type ENUM('income', 'expense') NOT NULL,
+    description TEXT,
+    transaction_date DATE NOT NULL,
+    project_id INT NULL,
+    tax DECIMAL(5,2) DEFAULT 0,
+    status ENUM('paid', 'pending', 'overdue') DEFAULT 'paid',
+    tax_deductible BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (project_id) REFERENCES business_projects(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
 
--- Eksport danych został odznaczony.
+-- Tabela projektów firmowych
+CREATE TABLE business_projects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    client VARCHAR(255) NOT NULL,
+    budget DECIMAL(12,2) NOT NULL,
+    spent DECIMAL(12,2) DEFAULT 0,
+    status ENUM('planning', 'in_progress', 'completed', 'cancelled', 'on_hold') DEFAULT 'planning',
+    priority ENUM('low', 'medium', 'high') DEFAULT 'medium',
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
 
--- Eksport danych został odznaczony.
+-- Tabela zadań projektowych
+CREATE TABLE project_tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    project_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    status ENUM('pending', 'in_progress', 'completed') DEFAULT 'pending',
+    budget DECIMAL(12,2) DEFAULT 0,
+    assignee VARCHAR(100) DEFAULT NULL,
+    due_date DATE DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (project_id) REFERENCES business_projects(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
 
--- Eksport danych został odznaczony.
+-- Tabela faktur
+CREATE TABLE invoices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    invoice_number VARCHAR(50) UNIQUE NOT NULL,
+    client_name VARCHAR(255) NOT NULL,
+    amount DECIMAL(12,2) NOT NULL,
+    tax DECIMAL(12,2) DEFAULT 0,
+    total DECIMAL(12,2) NOT NULL,
+    status ENUM('draft', 'sent', 'paid', 'overdue', 'cancelled') DEFAULT 'draft',
+    issue_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    project_id INT NULL,
+    items JSON,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (project_id) REFERENCES business_projects(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
 
--- Eksport danych został odznaczony.
+-- Tabela celów oszczędnościowych
+CREATE TABLE personal_goals (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    target_amount DECIMAL(12,2) NOT NULL,
+    current_amount DECIMAL(12,2) DEFAULT 0,
+    deadline DATE NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    priority ENUM('low', 'medium', 'high') DEFAULT 'medium',
+    description TEXT,
+    milestones JSON,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
 
--- Eksport danych został odznaczony.
+-- Tabela ustawień użytkownika
+CREATE TABLE user_settings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    company_name VARCHAR(255) DEFAULT NULL,
+    tax_number VARCHAR(50) DEFAULT NULL,
+    company_address TEXT DEFAULT NULL,
+    notifications JSON DEFAULT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+} catch (PDOException $e) {
+    // To zapisze błąd do pliku zamiast tylko wyświetlać
+    Logger::error("Błąd bazy danych: " . $e->getMessage()); 
+    throw new Exception("Błąd połączenia z bazą");
+}
 
--- Eksport danych został odznaczony.
+-- Indexy dla wydajności
+CREATE INDEX idx_user_transactions ON personal_transactions(user_id, transaction_date);
+CREATE INDEX idx_user_business ON business_transactions(user_id, transaction_date);
+CREATE INDEX idx_user_goals ON personal_goals(user_id, deadline);
+CREATE INDEX idx_project_status ON business_projects(user_id, status);
+CREATE INDEX idx_invoice_status ON invoices(user_id, status, due_date);
 
--- Eksport danych został odznaczony.
-
--- Eksport danych został odznaczony.
-
-/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+-- Przykładowy użytkownik (hasło: admin123)
+INSERT INTO users (username, email, password_hash, account_type) VALUES 
+('admin', 'admin@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'both');
